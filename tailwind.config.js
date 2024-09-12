@@ -7,6 +7,7 @@ module.exports = {
     'hover:bg-primary',
     'rounded-3xl',
     'bg-primary',
+    'hover:bg-custom-black',
 
   ],
   theme: {
