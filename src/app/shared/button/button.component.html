@@ -1,0 +1,11 @@
+<div 
+    *ngIf="buttonConfig"
+    class="custom-button flex items-center p-3 px-5 w-fit cursor-pointer"
+    [ngClass]="[buttonConfig.background, buttonConfig.color, buttonConfig.rounded]"
+    [class]="buttonConfig.hoverBackground || ''">
+        <p class="px-2 font-poppins"
+        [ngClass]="[buttonConfig.text.size, buttonConfig.text.weight]">
+            {{ buttonConfig.text.content }}
+        </p>
+        <lucide-angular [name]="buttonConfig.icon" size="15px" class="my-icon"></lucide-angular>
+</div>
