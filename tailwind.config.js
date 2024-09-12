@@ -6,7 +6,8 @@ module.exports = {
   safelist: [
     'hover:bg-primary',
     'rounded-3xl',
-    
+    'bg-primary',
+
   ],
   theme: {
     extend: {
