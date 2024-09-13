@@ -1,0 +1,7 @@
+<div class="scroller" data-animated="true">
+    <div class="scroller__inner justify-around">
+        <img [src]="company.logo"  *ngFor="let company of companies"
+        [class]="company.size || 'w-24 h-24'"
+         />
+    </div>
+</div>

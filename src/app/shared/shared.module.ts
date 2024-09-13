@@ -3,14 +3,15 @@ import { CommonModule } from '@angular/common';
 import { ButtonComponent } from './button/button.component';
 import { Handshake, LucideAngularModule } from 'lucide-angular';
 import { CardComponent } from './card/card.component';
+import { ScrollerComponent } from './scroller/scroller.component';
 
 
 
 @NgModule({
   declarations: [
-  
     ButtonComponent,
-    CardComponent
+    CardComponent,
+    ScrollerComponent
   ],
   imports: [
     CommonModule,
@@ -18,7 +19,8 @@ import { CardComponent } from './card/card.component';
   ],
   exports: [
     ButtonComponent,
-    CardComponent
+    CardComponent,
+    ScrollerComponent
   ]
 })
 export class SharedModule { }

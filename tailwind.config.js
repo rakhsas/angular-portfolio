@@ -8,6 +8,8 @@ module.exports = {
     'rounded-3xl',
     'bg-primary',
     'hover:bg-custom-black',
+    'w-32',
+    'h-32'
 
   ],
   theme: {
