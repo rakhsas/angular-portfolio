@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HolderComponent } from './holder/holder.component';
 import { WorksRoutingModule } from './works-routing.module';
 import { SharedModule } from "../shared/shared.module";
+import { LucideAngularModule, MoveUpRight } from 'lucide-angular';
 
 
 
@@ -13,7 +14,8 @@ import { SharedModule } from "../shared/shared.module";
   imports: [
     CommonModule,
     WorksRoutingModule,
-    SharedModule
+    SharedModule,
+    LucideAngularModule.pick({ MoveUpRight })
 ]
 })
 export class WorksModule { }

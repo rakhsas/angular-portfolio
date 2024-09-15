@@ -33,3 +33,18 @@
 .filter-btns-one li.current::after {
     opacity: 1;
 }
+
+.arrow {
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    text-align: center;
+}
+
+.container {
+    animation-delay: 0.2s;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: fadeInUp;
+    animation: fadeInUp 1s both;
+}
