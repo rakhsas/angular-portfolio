@@ -1,10 +1,10 @@
 <div class="header flex justify-between items-center w-full h-auto">
     <div class="logo">
-        <p class="font-poppins text-2xl font-bold text-white"> {{ appTitle | uppercase }}</p>
+        <p class="font-poppins text-3xl font-bold text-white capitalize"> {{ appTitle }}</p>
     </div>
-    <div class="navigations flex justify-between">
+    <div class="navigations lx:flex justify-between hidden">
         <div class="navs px-3" *ngFor="let nav of routes">
-            <a [routerLink]="nav.path" class="text-text-gray font-poppins cursor-pointer transition-colors ease-in-out delay-100 hover:text-primary">{{ nav.name }}</a>
+            <a [routerLink]="nav.route" class="text-text-gray font-poppins cursor-pointer transition-colors ease-in-out delay-100 hover:text-primary">{{ nav.name }}</a>
         </div>
     </div>
     <app-button [buttonConfig]="HireMeBrn"></app-button>

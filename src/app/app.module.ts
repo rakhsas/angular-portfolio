@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { LucideAngularModule, Handshake } from 'lucide-angular';
 import { SharedModule } from "./shared/shared.module";
+import { RouterLink, RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
@@ -13,6 +14,7 @@ import { SharedModule } from "./shared/shared.module";
   ],
   imports: [
     BrowserModule,
+    RouterModule,
     AppRoutingModule,
     LucideAngularModule.pick({ Handshake }),
     SharedModule

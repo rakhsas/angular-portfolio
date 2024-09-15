@@ -1,11 +1,11 @@
-<div class="container grid w-full gap-8 grid-cols-1 md:grid-cols-12 py-4">
+<div class="container grid w-full gap-8 grid-cols-1 md:grid-cols-12 py-4 px-4 lg:px-10">
     <div class="col-span-12 md:col-span-4">
         <custom-card [cardTemplate]="myCard"
-            addedClass="flex flex-col items-center justify-center flex-1 text-white text-center"></custom-card>
+            [addedClass]="'flex flex-col items-center justify-center flex-1 text-white text-center rounded-[20px] p-2'"></custom-card>
     </div>
     <div class="col-span-12 md:col-span-8 flex flex-col justify-between gap-8">
-        <custom-card [cardTemplate]="aboutCard" addedClass=""></custom-card>
-        <custom-card [cardTemplate]="companiesCard" addedClass=""></custom-card>
+        <custom-card [cardTemplate]="aboutCard" addedClass="rounded-[20px] p-2"></custom-card>
+        <custom-card [cardTemplate]="companiesCard" addedClass="rounded-[20px] p-2"></custom-card>
 
     </div>
 </div>
@@ -40,7 +40,7 @@
 <ng-template #aboutCard>
     <div class="flex flex-col p-10 text-white bg-custom-black rounded-[20px] w-full gap-3">
         <p class="font-poppins text-text-gray">Hello There!</p>
-        <p class="about font-poppins text-white font-normal text-4xl max-w-2xl"> I’m Rida Akhsas, a product designer
+        <p class="about font-poppins text-white font-normal text-4xl max-w-2xl tracking-wide"> I’m Rida Akhsas, a product designer
             crafting user-centric design with pixel-perfect precision.</p>
         <div class="status flex gap-2 items-center">
             <div class="cirlce rounded-full bg-lime-300 p-1.5"></div>

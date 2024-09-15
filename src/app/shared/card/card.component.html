@@ -1,4 +1,9 @@
-<div class="card p-2 gap-y-4 bg-custom-black rounded-[20px]"
+<!-- <div class="card p-2 gap-y-4 bg-custom-black rounded-[20px]"
     [ngClass]="addedClass">
+    >
+    <ng-container *ngTemplateOutlet="cardTemplate"></ng-container>
+</div> -->
+
+<div class="card gap-y-4 bg-custom-black" [style.border]="borderClass" [ngClass]="addedClass">
     <ng-container *ngTemplateOutlet="cardTemplate"></ng-container>
 </div>

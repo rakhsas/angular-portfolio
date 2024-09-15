@@ -9,7 +9,10 @@ module.exports = {
     'bg-primary',
     'hover:bg-custom-black',
     'w-32',
-    'h-32'
+    'h-32',
+    'bg-zinc-950',
+    'text-xs',
+    'text-sm',
 
   ],
   theme: {
@@ -22,6 +25,9 @@ module.exports = {
         'text-gray': '#cecece',
         'button-border': '#77777d33',
         'custom-black': '#121214',
+      },
+      screens: {
+        'lx': '990px'
       }
     },
   },

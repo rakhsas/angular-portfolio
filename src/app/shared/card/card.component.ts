@@ -7,10 +7,10 @@ import { Component, Input, OnInit, TemplateRef } from '@angular/core';
 })
 export class CardComponent implements OnInit {
   @Input() addedClass!: string;
+  @Input() borderClass!: string;
   @Input() cardTemplate!: TemplateRef<any>;
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
-
 }

@@ -1,0 +1,64 @@
+<div class="container grid w-full gap-8 py-4 px-4 lg:px-10">
+    <custom-card [cardTemplate]="mainCard" addedClass="flex flex-col items-center w-full rounded-[20px] p-4"></custom-card>
+</div>
+
+<ng-template #mainCard>
+    <div class="heading flex flex-col gap-8 w-full items-center py-6">
+        <p class="font-poppins text-white text-5xl font-semibold text-center tracking-wide">Works & Projects</p>
+        <p class="font-poppins text-text-gray text-base text-center max-w-xl text-wrap">
+            Check out some of my projects, meticulously crafted with love and dedication, each one reflecting the passion and soul I poured into every detail.
+        </p>
+    </div>
+    
+    <ul class="project-filter filter-btns-one visible self-start flex flex-wrap">
+        <li class="project-filter-item" *ngFor="let category of projectTabCategories"
+            [ngClass]="category.isActive ? 'current' : ''"
+            (click)="setCurrent(category)">
+            <span class="project-filter-item-text ">{{category.name}}</span>
+        </li>
+    </ul>
+
+    <!-- Row layout for the cards -->
+    <div class="grid w-full grid-cols-1 md:grid-cols-3 gap-4 px-5">
+        <!-- Card 1 -->
+        <div class="col-span-1 w-fit">
+            <custom-card [cardTemplate]="projectCard" [addedClass]="'flex flex-col rounded-b-[20px] bg-zinc-950'" [borderClass]="'1px solid #77777d33'"></custom-card>
+            <ng-template class="project-item" #projectCard>
+                <div class="project-image lg:max-w-sm max-w-xs">
+                    <img src="https://wordpressboss.com/cp/bentos-demo/assets/images/projects/work1.jpg" alt="">
+                </div>
+                <div class="project-content p-4">
+                    <span class="sub-title text-text-gray">Branding</span>
+                    <h3 class="text-white">Mobile Application Design</h3>
+                </div>
+            </ng-template>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-span-1 w-fit">
+            <custom-card [cardTemplate]="projectCard" [addedClass]="'flex flex-col rounded-b-[20px] bg-zinc-950'" [borderClass]="'1px solid #77777d33'"></custom-card>
+            <ng-template class="project-item" #projectCard>
+                <div class="project-image lg:max-w-xs max-w-sm">
+                    <img src="https://wordpressboss.com/cp/bentos-demo/assets/images/projects/work2.jpg" alt="">
+                </div>
+                <div class="project-content p-4">
+                    <span class="sub-title text-text-gray">Branding</span>
+                    <h3 class="text-white">Mobile Application Design</h3>
+                </div>
+            </ng-template>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-span-1 w-fit">
+            <custom-card [cardTemplate]="projectCard" [addedClass]="'flex flex-col rounded-b-[20px] bg-zinc-950'" [borderClass]="'1px solid #77777d33'"></custom-card>
+            <ng-template class="project-item" #projectCard>
+                <div class="project-image lg:max-w-xs max-w-sm">
+                    <img src="https://wordpressboss.com/cp/bentos-demo/assets/images/projects/work3.jpg" alt="">
+                </div>
+                <div class="project-content p-4">
+                    <span class="sub-title text-text-gray">Branding</span>
+                    <h3 class="text-white">Mobile Application Design</h3>
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</ng-template>
