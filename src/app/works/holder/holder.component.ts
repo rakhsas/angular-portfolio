@@ -25,5 +25,23 @@ export class HolderComponent implements OnInit {
   }
   ngOnInit(): void {
   }
+  works: any[] = [
+    {
+      type: 'Branding',
+      title: 'Mobile Application Design',
+      img: 'https://wordpressboss.com/cp/bentos-demo/assets/images/projects/work1.jpg'
+    },
+    {
+      type: 'Branding',
+      title: 'Mobile Application Design',
+      img: 'https://wordpressboss.com/cp/bentos-demo/assets/images/projects/work2.jpg'
+    },
+    {
+      type: 'Branding',
+      title: 'Mobile Application Design',
+      img: 'https://wordpressboss.com/cp/bentos-demo/assets/images/projects/work3.jpg'
+    },
+
+  ]
 
 }
