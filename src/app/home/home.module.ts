@@ -4,6 +4,7 @@ import { IntroComponent } from './intro/intro.component';
 import { HomeRoutingModule } from './home.routing';
 import { LucideAngularModule, Facebook, Twitter, Linkedin, Github, ArrowDownToLine } from 'lucide-angular';
 import { SharedModule } from "../shared/shared.module";
+import { WorksModule } from '../works/works.module';
 
 
 
@@ -15,7 +16,8 @@ import { SharedModule } from "../shared/shared.module";
     CommonModule,
     HomeRoutingModule,
     LucideAngularModule.pick({ Facebook, Twitter, Linkedin, Github, ArrowDownToLine }),
-    SharedModule
+    SharedModule,
+    WorksModule
 ]
 })
 export class HomeModule { }

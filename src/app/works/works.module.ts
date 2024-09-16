@@ -18,6 +18,9 @@ import { ProjectComponent } from './project/project.component';
     WorksRoutingModule,
     SharedModule,
     LucideAngularModule.pick({ MoveUpRight, ArrowDownToLine })
-]
+  ],
+  exports: [
+    HolderComponent
+  ]
 })
 export class WorksModule { }

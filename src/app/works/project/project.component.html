@@ -10,13 +10,27 @@
         <div class="info col-span-1 lg:col-span-4">
             <custom-card [cardTemplate]="projectInfoDetails" addedClass="rounded-[20px] p-4"></custom-card>
         </div>
-        
         <div class="info2 col-span-1 lg:col-span-8">
             <custom-card [cardTemplate]="projectDescription" addedClass="rounded-[20px] p-4"></custom-card>
         </div>
     </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-2 lg:px-10" *ngIf="project.img.img2">
+        <img [src]="project.img.img1" alt="{{ project.name }}" class="w-full h-full object-cover rounded-[20px]">
+        <img [src]="project.img.img2" alt="{{ project.name }}" class="w-full h-full object-cover rounded-[20px]">
+    </div>
+    <div class="px-2 lg:px-10">
+        <custom-card [cardTemplate]="name" addedClass="flex flex-col items-center w-full rounded-[20px] p-4"></custom-card>
+    </div>
 </div>
 
+<ng-template #name>
+    <div class="flex flex-col gap-4 p-16 items-center">
+        <p class="text-white text-4xl font-normal text-wrap text-center tracking-wide max-w-[60rem]">Are You Ready to kickstart your project with a touch of magic?</p>
+        <span class="text-text-gray font-light text-base text-center text-wrap max-w-[60rem]">Reach out and let's make it happen ✨. I'm also available for full-time or Part-time opportunities to push the boundaries of design and deliver exceptional work.</span>
+    
+        <app-button [buttonConfig]="downloadBtnConf"></app-button>
+    </div>
+</ng-template>
 
 <ng-template #projectInfoDetails>
     <div class="flex flex-col gap-4 w-full lg:p-6 p-3">

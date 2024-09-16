@@ -25,7 +25,7 @@
             <ng-template #projectCard>
                 <div class="project-item">
                     <div class="project-image w-full relative">
-                        <img [src]="project.img.img1" alt="">
+                        <img [src]="project.img.img1" alt="" class="max-h-64 w-full">
                         <div
                             (click)="setProject(project)"
                             class="arrow absolute rounded-full bg-primary p-2 lg:p-4 -z-10 opacity-100 cursor-pointer">
@@ -33,7 +33,7 @@
                         </div>
                     </div>
                     <div class="project-content p-4">
-                        <span class="sub-title text-text-gray">{{project.type}}</span>
+                        <span class="sub-title text-text-gray">{{project.type[0]}}</span>
                         <h3 class="text-white">{{ project.name }}</h3>
                     </div>
                 </div>
