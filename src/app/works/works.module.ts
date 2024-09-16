@@ -3,19 +3,21 @@ import { CommonModule } from '@angular/common';
 import { HolderComponent } from './holder/holder.component';
 import { WorksRoutingModule } from './works-routing.module';
 import { SharedModule } from "../shared/shared.module";
-import { LucideAngularModule, MoveUpRight } from 'lucide-angular';
+import { ArrowDown, ArrowDownToLine, LucideAngularModule, MoveUpRight } from 'lucide-angular';
+import { ProjectComponent } from './project/project.component';
 
 
 
 @NgModule({
   declarations: [
-    HolderComponent
+    HolderComponent,
+    ProjectComponent
   ],
   imports: [
     CommonModule,
     WorksRoutingModule,
     SharedModule,
-    LucideAngularModule.pick({ MoveUpRight })
+    LucideAngularModule.pick({ MoveUpRight, ArrowDownToLine })
 ]
 })
 export class WorksModule { }

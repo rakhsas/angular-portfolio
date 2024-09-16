@@ -8,10 +8,12 @@ import { LucideAngularModule, Handshake } from 'lucide-angular';
 import { SharedModule } from "./shared/shared.module";
 import { RouterLink, RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

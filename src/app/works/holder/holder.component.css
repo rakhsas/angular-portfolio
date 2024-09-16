@@ -48,3 +48,11 @@
     animation-name: fadeInUp;
     animation: fadeInUp 1s both;
 }
+.project-item:hover .arrow {
+    z-index: 10 !important;
+    transition: z-index 0.3s ease !important;
+}
+.project-item:hover .project-image img {
+    opacity: 0.4;
+    transition: opacity 0.3s ease !important;
+}

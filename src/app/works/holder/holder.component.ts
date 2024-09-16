@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, style, transition, animate, keyframes } from '@angular/animations';
+import { Project } from 'src/app/shared/models/project.model';
+import { ButtonModel } from 'src/app/shared/models/button.model';
+import { ProjectService } from 'src/app/services/project.service';
+import { Router } from '@angular/router';
 
 interface projectTabCategory {
   name: string;
@@ -23,7 +27,10 @@ interface projectTabCategory {
 })
 export class HolderComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public projectService: ProjectService,
+    private route: Router
+  ) { }
   projectTabCategories: projectTabCategory[] = [
     {name: 'Show All', isActive: true},
     {name: 'Web', isActive: false},
@@ -42,37 +49,114 @@ export class HolderComponent implements OnInit {
       return selectedTab!.name === 'Show All' || work.type === selectedTab!.name;
     });
   }
-  works: any[] = [
+  setProject(project: Project): void {
+    this.projectService.setProject(project);
+    this.route.navigate([`/works/${project.id}`]);
+  }
+  downloadBtnConf: ButtonModel = {
+    text: {
+      content: 'Let\'s Talk',
+      size: 'text-sm',
+      weight: 'font-semibold'
+    },
+    background: 'bg-primary',
+    color: 'text-white',
+    rounded: 'rounded-xl',
+    icon: 'ArrowDownToLine',
+    hoverBackground: 'hover:bg-custom-black'
+  }
+  works: Project[] = [
     {
+      // id uid:
+      id: 'ab5fd602-7385-11ef-b864-0242ac120002',
       type: 'Web',
-      title: 'Mobile Application Design',
-      img: 'https://wordpressboss.com/cp/bentos-demo/assets/images/projects/work1.jpg'
+      name: 'Mobile Application Design',
+      img: {
+        img1: 'https://wordpressboss.com/cp/bentos-demo/assets/images/projects/work1.jpg'
+      },
+      description: {
+        definition: 'Mobile Application Design',
+        details: 'Mobile Application Design'
+      },
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+      year: 2021
     },
     {
+      // id uid:
+      id: 'ab5fd602-7385-11ef-b864-0242ac120003',
       type: 'Devops',
-      title: 'Mobile Application Design',
-      img: 'https://wordpressboss.com/cp/bentos-demo/assets/images/projects/work2.jpg'
+      name: 'Mobile Application Design',
+      img: {
+        img1: 'https://wordpressboss.com/cp/bentos-demo/assets/images/projects/work2.jpg'
+      },
+      description: {
+        definition: 'Mobile Application Design',
+        details: 'Mobile Application Design'
+      },
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+      year: 2021
     },
     {
+      // id uid:
+      id: 'ab5fd602-7385-11ef-b864-0242ac120004',
       type: 'Design',
-      title: 'Mobile Application Design',
-      img: 'https://wordpressboss.com/cp/bentos-demo/assets/images/projects/work3.jpg'
+      name: 'Mobile Application Design',
+      img: {
+        img1: 'https://wordpressboss.com/cp/bentos-demo/assets/images/projects/work3.jpg'
+      },
+      description: {
+        definition: 'Mobile Application Design',
+        details: 'Mobile Application Design'
+      },
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+      year: 2021
     },
     {
-      type: 'Devops',
-      title: 'Mobile Application Design',
-      img: 'https://wordpressboss.com/cp/bentos-demo/assets/images/projects/work4.jpg'
+      // id uid:
+      id: 'ab5fd602-7385-11ef-b864-0242ac120005',
+      type: 'Web',
+      name: 'Mobile Application Design',
+      img: {
+        img1: 'https://wordpressboss.com/cp/bentos-demo/assets/images/projects/work4.jpg'
+      },
+      description: {
+        definition: 'Mobile Application Design',
+        details: 'Mobile Application Design'
+      },
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+      year: 2021
     },
     {
+      // id uid:
+      id: 'ab5fd602-7385-11ef-b864-0242ac120006',
       type: 'Devops',
-      title: 'Mobile Application Design',
-      img: 'https://wordpressboss.com/cp/bentos-demo/assets/images/projects/work5.jpg'
+      name: 'Mobile Application Design',
+      img: {
+        img1: 'https://wordpressboss.com/cp/bentos-demo/assets/images/projects/work5.jpg'
+      },
+      description: {
+        definition: 'Mobile Application Design',
+        details: 'Mobile Application Design'
+      },
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+      year: 2021
     },
     {
-      type: 'Devops',
-      title: 'Mobile Application Design',
-      img: 'https://wordpressboss.com/cp/bentos-demo/assets/images/projects/work6.jpg'
-    },
+      // id uid:
+      id: 'ab5fd602-7385-11ef-b864-0242ac120007',
+      type: 'Design',
+      name: 'Mobile Application Design',
+      img: {
+        img1: 'https://wordpressboss.com/cp/bentos-demo/assets/images/projects/work6.jpg'
+      },
+      description: {
+        definition: 'Mobile Application Design',
+        details: 'Mobile Application Design'
+      },
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+      year: 2021
+    }
+    
   ]
 
 }

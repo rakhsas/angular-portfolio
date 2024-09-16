@@ -1,0 +1,43 @@
+<div class="container flex flex-col gap-8 py-4">
+    <div class="title flex flex-col py-4 mt-32 px-2 lg:px-10 gap-4 text-center">
+        <p class="text-center text-text-gray uppercase">{{project.type}}</p>
+        <span class="text-white lg:text-5xl text-3xl font-semibold text-center tracking-wide">{{ project.name }}</span>
+    </div>
+    
+    <img class="w-screen max-w-none lg:-mx-20 -ml-4" [src]="project.img.img1" alt="{{ project.name }}">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 w-full px-2 lg:px-10">
+        <div class="info col-span-1 lg:col-span-4">
+            <custom-card [cardTemplate]="projectInfoDetails" addedClass="rounded-[20px] p-4"></custom-card>
+        </div>
+        
+        <div class="info2 col-span-1 lg:col-span-8">
+            <custom-card [cardTemplate]="projectDescription" addedClass="rounded-[20px] p-4"></custom-card>
+        </div>
+    </div>
+</div>
+
+
+<ng-template #projectInfoDetails>
+    <div class="flex flex-col gap-4 w-full lg:p-6 p-3">
+        <p class="text-gray text-lg font-light">Year</p>
+        <p class="text-white text-xl font-medium">{{ project.year }}</p>
+        <p class="text-gray text-lg font-light">Client</p>
+        <p class="text-white text-xl font-medium">Personal</p>
+        <p class="text-gray text-lg font-light">Services</p>
+        <p class="text-white text-xl font-medium">{{ project.type }}</p>
+        <p class="text-gray text-lg font-light">Technologies</p>
+        <p class="text-white text-lg font-medium text-wrap max-w-sm">{{ project.technologies }}</p>
+    </div>
+</ng-template>
+<ng-template #projectDescription>
+    <div class="flex flex-col lg:p-6 p-3 gap-4">
+        <div class="title">
+            <p class="text-white text-2xl font-medium">Description</p>
+        </div>
+        <div class="description flex flex-col gap-7">
+            <p class="text-gray text-lg font-normal text-justify">{{ project.description.definition }}</p>
+            <p class="text-gray text-lg font-normal text-justify">{{ project.description.details }}</p>
+        </div>
+    </div>
+</ng-template>

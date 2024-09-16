@@ -13,7 +13,6 @@ module.exports = {
     'bg-zinc-950',
     'text-xs',
     'text-sm',
-
   ],
   theme: {
     extend: {
@@ -25,6 +24,7 @@ module.exports = {
         'text-gray': '#cecece',
         'button-border': '#77777d33',
         'custom-black': '#121214',
+        'gray': '#9f9f9f'
       },
       screens: {
         'lx': '990px'
