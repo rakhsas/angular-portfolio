@@ -4,6 +4,7 @@ import { ButtonComponent } from './button/button.component';
 import { Handshake, LucideAngularModule } from 'lucide-angular';
 import { CardComponent } from './card/card.component';
 import { ScrollerComponent } from './scroller/scroller.component';
+import { SafeUrlPipe } from './pipes/safe-url.pipe';
 
 
 
@@ -11,7 +12,8 @@ import { ScrollerComponent } from './scroller/scroller.component';
   declarations: [
     ButtonComponent,
     CardComponent,
-    ScrollerComponent
+    ScrollerComponent,
+    SafeUrlPipe
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { ScrollerComponent } from './scroller/scroller.component';
   exports: [
     ButtonComponent,
     CardComponent,
-    ScrollerComponent
+    ScrollerComponent,
+    SafeUrlPipe
   ]
 })
 export class SharedModule { }

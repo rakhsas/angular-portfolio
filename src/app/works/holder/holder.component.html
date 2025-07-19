@@ -1,6 +1,6 @@
 <div class="container grid w-full gap-8 py-4 mt-20 px-4 lg:px-10" @fadeInUp>
     <custom-card [cardTemplate]="mainCard" addedClass="flex flex-col items-center w-full rounded-[20px] p-4"></custom-card>
-    <custom-card [cardTemplate]="name" addedClass="flex flex-col items-center w-full rounded-[20px] p-4"></custom-card>
+    <!-- <custom-card [cardTemplate]="name" addedClass="flex flex-col items-center w-full rounded-[20px] p-4"></custom-card> -->
 </div>
 
 <ng-template #mainCard>
@@ -25,7 +25,7 @@
             <ng-template #projectCard>
                 <div class="project-item">
                     <div class="project-image w-full relative">
-                        <img [src]="project.img.img1" alt="" class="max-h-64 w-full">
+                        <img [src]="project.img.img1.value" alt="" class="max-h-64 w-full">
                         <div
                             (click)="setProject(project)"
                             class="arrow absolute rounded-full bg-primary p-2 lg:p-4 -z-10 opacity-100 cursor-pointer">

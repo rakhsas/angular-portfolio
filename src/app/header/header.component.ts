@@ -16,22 +16,22 @@ export class HeaderComponent implements OnInit {
       name: 'Home',
       route: '/home'
     },
-    {
-      name: 'About',
-      route: '/about'
-    },
-    {
-      name: 'Services',
-      route: '/services'
-    },
+    // {
+    //   name: 'About',
+    //   route: '/about'
+    // },
+    // {
+    //   name: 'Services',
+    //   route: '/services'
+    // },
     {
       name: 'Works',
       route: 'works'
     },
-    {
-      name: 'Contact',
-      route: '/contact'
-    }
+    // {
+    //   name: 'Contact',
+    //   route: '/contact'
+    // }
   ]
 
   ngOnInit(): void {

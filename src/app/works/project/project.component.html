@@ -4,7 +4,10 @@
         <span class="text-white lg:text-5xl text-3xl font-semibold text-center tracking-wide">{{ project.name }}</span>
     </div>
     
-    <img class="w-screen max-w-none lg:-mx-20 -ml-4" [src]="project.img.img1" alt="{{ project.name }}">
+    <!-- Main featured image -->
+    <div class="w-screen max-w-none lg:-mx-20 -ml-4">
+        <img [src]="project.img.img1.value" [alt]="project.name" [ngClass]="project.img.img1.class || 'w-full'">
+    </div>
     
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 w-full px-2 lg:px-10">
         <div class="info col-span-1 lg:col-span-4">
@@ -14,14 +17,47 @@
             <custom-card [cardTemplate]="projectDescription" addedClass="rounded-[20px] p-4"></custom-card>
         </div>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-2 lg:px-10" *ngIf="project.img.img2">
-        <img [src]="project.img.img1" alt="{{ project.name }}" class="w-full h-full object-cover rounded-[20px]">
-        <img [src]="project.img.img2" alt="{{ project.name }}" class="w-full h-full object-cover rounded-[20px]">
+
+    <!-- Video section (if exists) -->
+    <div class="px-2 lg:px-10" *ngIf="project.video">
+        <div class="relative aspect-w-16 aspect-h-9 rounded-[20px] overflow-hidden">
+            <iframe 
+                [src]="project.video | safeUrl" 
+                class="w-full h-full" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
     </div>
-    <div class="px-2 lg:px-10">
+
+    <!-- Image gallery grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-2 lg:px-10" *ngIf="hasAdditionalImages()">
+        <ng-container *ngFor="let img of getAdditionalImages()">
+            <img [src]="img.value.src" [alt]="project.name + ' gallery image'" 
+                 [ngClass]="img.value.class"
+                 class="cursor-zoom-ind"
+                 (clic1k)="openLightbox(img.value.src)">
+        </ng-container>
+    </div>
+
+    <!-- <div class="px-2 lg:px-10">
         <custom-card [cardTemplate]="name" addedClass="flex flex-col items-center w-full rounded-[20px] p-4"></custom-card>
+    </div> -->
+</div>
+
+<!-- Lightbox Modal -->
+<div class="fixed inset-0 z-50 bg-black bg-opacity-90 flex items-center justify-center p-4" *ngIf="showLightbox" @fadeInOut>
+    <button class="absolute top-4 right-4 text-white z-10 hover:text-primary transition-colors" 
+            (click)="closeLightbox()">
+        <i-lucide name="x" class="w-8 h-8"></i-lucide>
+    </button>
+    <div class="max-w-[90vw] max-h-[90vh]">
+        <img [src]="lightboxImage" [alt]="'Enlarged view'" class="max-w-full max-h-full object-contain">
     </div>
 </div>
+
+<!-- Rest of your templates remain the same -->
 
 <ng-template #name>
     <div class="flex flex-col gap-4 p-16 items-center">

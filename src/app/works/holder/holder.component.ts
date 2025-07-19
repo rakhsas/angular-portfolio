@@ -68,6 +68,7 @@ export class HolderComponent implements OnInit {
     icon: 'ArrowDownToLine',
     hoverBackground: 'hover:bg-custom-black'
   }
+  // assign all the imgs class with "w-full h-full object-cover rounded-[20px]"
   works: Project[] = [
     {
       // id uid:
@@ -75,8 +76,14 @@ export class HolderComponent implements OnInit {
       type: [projectTypes.Web],
       name: 'FT Transcendence',
       img: {
-        img1: 'assets/ft_transcendence/darkMode.jpg',
-        img2: 'assets/ft_transcendence/lightMode.jpg'
+        img1: {
+          value: 'assets/ft_transcendence/lightMode.jpg',
+          class: 'w-full h-full object-cover rounded-[20px]'
+        },
+        img2: {
+          value: 'assets/ft_transcendence/darkMode.jpg',
+          class: 'w-full h-full object-cover rounded-[20px]'
+        }
       },
       description: {
         definition: 'A Web Application project designed to build a competitive online multiplayer game where players can play a game of pong against each other.',
@@ -95,8 +102,14 @@ export class HolderComponent implements OnInit {
       type: [projectTypes.Devops, projectTypes.Rigor, projectTypes.Network, projectTypes.System],
       name: 'Inception',
       img: {
-        img1: 'assets/inception/inception.webp',
-        img2: 'assets/inception/inception-structure.png'
+        img1: {
+          value: 'assets/inception/inception.webp',
+          class: 'w-full h-full object-cover rounded-[20px]'
+        },
+        img2: {
+          value: 'assets/inception/inception-structure.png',
+          class: 'w-full h-full object-cover rounded-[20px]'
+        }
       },
       description: {
         definition: 'This project aims to broaden My knowledge of system administration by using Docker.',   
@@ -117,8 +130,14 @@ export class HolderComponent implements OnInit {
       type: [projectTypes.Web],
       name: 'JobPilot',
       img: {
-        img1: 'assets/jobpilot/Home.jpg',
-        img2: 'assets/jobpilot/Job-List.jpg'
+        img1: {
+          value: 'assets/jobpilot/Home.jpg',
+          class: 'w-full h-full object-cover rounded-[20px]'
+        },
+        img2: {
+          value: 'assets/jobpilot/Job-List.jpg',
+          class: 'w-full h-full object-cover rounded-[20px]'
+        }
       },
       description: {
         definition: 'Web Application',
@@ -140,8 +159,14 @@ export class HolderComponent implements OnInit {
       name: 'Webserv',
       img: {
         // webserver pic
-        img1: 'https://www.web24.com.au/wp-content/uploads/2016/10/iStock_71952335_LARGE-1024x683.jpg',
-        img2: 'https://science.ku.dk/english/press/news/2021/danish-invention-to-make-computer-servers-worldwide-more-climate-friendly/billedinformationer/Computerservere_1100x600.jpg'
+        img1: {
+          value: 'https://www.web24.com.au/wp-content/uploads/2016/10/iStock_71952335_LARGE-1024x683.jpg',
+          class: 'w-full h-full object-cover rounded-[20px]'
+        },
+        img2: {
+          value: 'https://science.ku.dk/english/press/news/2021/danish-invention-to-make-computer-servers-worldwide-more-climate-friendly/billedinformationer/Computerservere_1100x600.jpg',
+          class: 'w-full h-full object-cover rounded-[20px]'
+        }
       },
       description: {
         definition: 'A Simple web server that can handle multiple connections at the same time.',
@@ -154,34 +179,63 @@ export class HolderComponent implements OnInit {
     {
       // id uid:
       id: 'ab5fd602-7385-11ef-b864-0242ac120006',
-      type: [projectTypes.Devops],
-      name: 'Mobile Application Design',
+      type: [projectTypes.Web],
+      name: 'Akhraz Market',
       img: {
-        img1: 'https://wordpressboss.com/cp/bentos-demo/assets/images/projects/work5.jpg'
+        img1: {
+          value: './assets/akhraz-market-home.png',
+          class: 'w-full h-full object-cover rounded-[20px]'
+        },
+        img2: {
+          value: './assets/akhraz-market.png',
+          class: 'w-full h-full object-cover rounded-[20px]'
+        }
       },
+      video: '',
       description: {
-        definition: 'Mobile Application Design',
-        details: 'Mobile Application Design'
+        definition: 'E-commerce Web Application',
+        details: 'Akhraz Market is an e-commerce web application designed to facilitate the buying of food products. The platform offers a user-friendly interface for customers to browse and purchase a wide variety of food items, while also providing admin tools for managing the store.'
       },
-      technologies: ['HTML', 'CSS', 'JavaScript'],
-      year: 2021
+      technologies: ['React', 'Nest JS', 'Tailwind CSS', 'Figma'],
+      year: 2025
     },
     {
-      // id uid:
       id: 'ab5fd602-7385-11ef-b864-0242ac120007',
       type: [projectTypes.Design],
-      name: 'Mobile Application Design',
+      name: 'Zawaj App',
       img: {
-        img1: 'https://wordpressboss.com/cp/bentos-demo/assets/images/projects/work6.jpg'
+        img1: {
+          value: './assets/DASHBOARD.jpg',
+          class: "w-full h-full object-cover rounded-[20px]"
+        },
+        img2: {
+          value: './assets/Home.jpg',
+          class: "w-full h-full object-cover rounded-[20px]"
+        },
+        img3: {
+          value: './assets/PROFILE.jpg',
+          class: "w-full !h-fit object-fill rounded-[20px]"
+        },
+        img4: {
+          value: './assets/Sign in.jpg',
+          class: "w-full h-full object-cover rounded-[20px]"
+        },
+        img5: {
+          value: './assets/Sign up.jpg',
+          class: "w-full h-full object-cover rounded-[20px]"
+        },
+        img6: {
+          value: './assets/Matched Women.png',
+          class: "w-full h-full object-cover rounded-[20px]"
+        }
       },
       description: {
         definition: 'Mobile Application Design',
         details: 'Mobile Application Design'
       },
-      technologies: ['HTML', 'CSS', 'JavaScript'],
-      year: 2021
+      technologies: ['Figma', 'Angular', 'Nest JS'],
+      year: 2025
     }
-    
   ]
 
 }

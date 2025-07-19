@@ -10,7 +10,7 @@
 </div>
 <app-holder></app-holder>
 <ng-template #myCard class="">
-    <img src="https://wordpressboss.com/cp/bentos-demo/assets/images/about/profile.png" class="w-40 md:w-72"
+    <img src="./assets/IMG_1686.jpg" class="w-40 md:w-72 rounded-2xl"
         alt="bentos-demo">
     <h2 class="uppercase font-medium font-poppins text-4xl">rida akhsas</h2>
     <p class="font-poppins text-text-gray text-wrap">I am a Web Developer based in Morocco.</p>
@@ -40,13 +40,27 @@
 <ng-template #aboutCard>
     <div class="flex flex-col p-10 text-white bg-custom-black rounded-[20px] w-full gap-3">
         <p class="font-poppins text-text-gray">Hello There!</p>
-        <p class="about font-poppins text-white font-normal text-4xl max-w-2xl tracking-wide"> I’m Rida Akhsas, a product designer
-            crafting user-centric design with pixel-perfect precision.</p>
+        <p class="about font-poppins text-white font-normal text-4xl max-w-2xl tracking-wide"> I’m Rida Akhsas, a frontend developer with a passion for crafting user-centric design with pixel-perfect precision.
+            </p>
         <div class="status flex gap-2 items-center">
             <div class="cirlce rounded-full bg-lime-300 p-1.5"></div>
-            <p class="font-poppins text-text-gray font-normal text-base">Available for Freelancing</p>
+            <p class="font-poppins text-text-gray font-normal text-base">Available for Work</p>
         </div>
-        <app-button [buttonConfig]="downloadBtnConf"></app-button>
+        <!-- <app-button [buttonConfig]="downloadBtnConf"></app-button> -->
+    </div>
+</ng-template>
+<ng-template #aboutCard>
+    <div class="flex flex-col p-10 text-white bg-custom-black rounded-[20px] w-full gap-3">
+        <p class="font-poppins text-text-gray">Hello There!</p>
+        <p class="about font-poppins text-white font-normal text-4xl max-w-2xl tracking-wide">
+            I'm Rida Akhsas, a Frontend Developer with strong UI/UX skills, 
+            transforming Figma designs into responsive, pixel-perfect web applications.
+        </p>
+        <div class="status flex gap-2 items-center">
+            <div class="cirlce rounded-full bg-lime-300 p-1.5"></div>
+            <p class="font-poppins text-text-gray font-normal text-base">Available for Work</p>
+        </div>
+        <!-- <app-button [buttonConfig]="downloadBtnConf"></app-button> -->
     </div>
 </ng-template>
 <ng-template #companiesCard>
